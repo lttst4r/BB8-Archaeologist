@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+/* Ativando a fonte importada acima para a divisão BODY */
+body {
+    font-family: 'Roboto Serif', serif;
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background-color:rgb(242, 195, 151);
+
+}
+
+/* Estilizando os INPUTS User e Token, ajustando dimensões, bordas e colorações */
+.adminAccessInput {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;                /* sem borda por padrão */
+    background-color: #ffffff;   /* fundo branco */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    font-size: 16px;
+    transition: border 0.15s ease, box-shadow 0.15s ease;
+    outline: none;
+}
+
+.adminAccessInput:focus {
+    border: 1px solid #000;      /* borda preta ao clicar/focar */
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.06); /* opcional: realce sutil */
+    outline: none;
+}
+
+/* Transformando um texto link em um texto comum */
+.hrefStyles{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+#header {
+    background-color: rgb(255, 123, 0);
+    height: 80px;           /* Altura fixa para o header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-family: 'Share Tech', sans-serif;
+}
+
+/* Ajuste o #page para não sobrepor o header */
+#page {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 500px;
+    margin-top: 100px;      /* Espaço suficiente para o header */
+}
+
+
+/* Alinhar divs do login */
+
+#login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #D9D9D9;
+    width: 900px;
+    min-height: 250px;    /* Altura mínima, não ocupa a tela toda */
+    height: 500px;    /* Altura automática conforme o conteúdo */
+    margin-top: 0;        /* Remove qualquer margin extra */
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+#freeAccess {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100px;    /* Altura mínima, não ocupa a tela toda */
+    height: auto;         /* Altura automática conforme o conteúdo */
+    margin-top: 0;        /* Remove qualquer margin extra */
+    box-sizing: border-box;
+}
+
+#freeAccess .hrefStyles { 
+    display: flex; /* Para que a largura seja aplicada corretamente */
+    text-align: center; /* Opcional: centraliza o texto/link */
+    margin: auto;  /* Opcional: centraliza horizontalmente */
+    font-size: 80px;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(255, 123, 0);
+    cursor: pointer;
+    padding: 10px 50px 10px 50px;
+    font-family: 'Share Tech', sans-serif;
+    font-weight: bold;
+}
+
+#adminAccess {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 250px;    /* Altura mínima, não ocupa a tela toda */
+    height: auto;         /* Altura automática conforme o conteúdo */
+    margin-top: 0;        /* Remove qualquer margin extra */
+
+    font-family: 'Share Tech', sans-serif;
+}
+
+#adminAccess .hrefStyles {
+    width: 80%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    font-size: 30px;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Share Tech', sans-serif;
+}
+
+#adminAccess .text {
+    font-size: 50px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+#adminAccess .adminAccessInput {
+    margin-bottom: 5px;
+    font-size: 20px;
+    height: 40px;
+    
+}
+#whiteBox {
+    background-color: #D9D9D9;
+    width: 45%;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+
+}
+#Separator {
+    width:93%; 
+    height:10px; 
+    background-color:#3e3e3e;
+    margin: 20px;
+}
+#Logobb8 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 300px; /* ajuste conforme necessário */
+    height: auto;
+}
+#logoSESI {
+    height: 50%;
+    margin: 10px;
+
+ }
+ #adminAccess button{
+    font-family: 'Share Tech', sans-serif;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 30px;
+    margin-top: 20px;
+ }
+
+
+
+

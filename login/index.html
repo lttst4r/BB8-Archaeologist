@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessar: BB8 - Archaeologist</title>
+    <link rel="icon" type="image/x-icon" href="https://tse1.mm.bing.net/th/id/OIP.pPe5LKE6erJKw5LTvxAfbQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Título do Site -->
+    <div id="header">
+        <h1>BB8: Archaeologist</h1>
+        <img src="sesi-logo-14.png" id="logoSESI">
+    </div>
+    <!-- Página de Login -->
+    <div id="page">
+        <img src="Logo BB8.jpeg" id="Logobb8">
+        <!-- Box para a página  -->
+        <div id="login">
+            <!-- Acesso livre (bypass para a visualização das saídas) -->
+            <div id="freeAccess">
+                <a href="../exibirSaidas/exibirSaidas.html" class="hrefStyles" id="freeAccessBTN" >Acessar Saídas</a>
+                <div id="Separator" ></div>
+            </div>
+            <!-- Acesso para administradores; Adicionar informações -->
+            <div id="adminAccess">
+                <div id="whiteBox">
+                    <h1 class="text">Modo Administrador</h1>
+                    <input type="text" id="user" class="adminAccessInput" placeholder="Usuário">
+                    <input type="password" id="token" class="adminAccessInput" placeholder="Senha">
+                    <button onclick="access()">Acessar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Identificar elementos
+
+        function access() {
+            const user = document.getElementById('user').value;
+            const token = document.getElementById('token').value;
+
+            // Credenciais fixas para exemplo
+            const validUser = 'admin';
+            const validToken = '123456';
+
+            if (user === validUser && token === validToken) {
+                // Redirecionar para a página principal
+                window.location.href = '../main/main.html';
+            } else {
+                alert('Usuário ou senha incorretos!');
+                window.location.reload();
+            }
+        }
+        
+
+    </script>
+</body>
+</html>

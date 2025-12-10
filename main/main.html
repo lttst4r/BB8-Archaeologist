@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programar Saídas: BB8 Archaeologist</title>
+    <link rel="icon" type="image/x-icon" href="https://tse1.mm.bing.net/th/id/OIP.pPe5LKE6erJKw5LTvxAfbQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="title">
+        <button onclick="window.location.href = '../login/index.html'" id="home"><img src="casa.png" width="50" height="50"></button>
+        <h1>BB8: Archaeologist</h1>
+        <img src="../login/sesi-logo-14.png" id="logoSESI">
+    </div>
+    <div id="content">
+        
+        <div id="map">
+            <!-- Mantive a imagem no DOM (oculta) — o canvas irá desenhá-la.
+                 id agora é "table" conforme solicitado -->
+            <img src="table.jpg" id="table" style="display:none">
+        </div>
+        <div id="separatorA" class="selectorbox">
+            <canvas id="canvas" width="1920" height="1080"></canvas>
+            <img src="../main/imagembb8.png" id="bb8Image" alt="Imagem do BB8">
+            <div id="entrances">
+                <div id="entrada">
+                        <label>Entrada</label>
+                        <input id="in-blue" name="In" value="blue" type="radio"><label for="in-blue" class="radio-label blue-label"></label>
+                        <input id="in-red" name="In" value="red" type="radio"><label for="in-red" class="radio-label red-label"></label>
+                </div>
+                        <div id="saida">
+                            <label>Saída</label>
+                            <input id="out-blue" name="Out" value="blue" type="radio"><label for="out-blue" class="radio-label blue-label"></label>
+                            <input id="out-red" name="Out" value="red" type="radio"><label for="out-red" class="radio-label red-label"></label>
+                </div>
+            </div>
+        </div>
+        <div id="inputs" class="selectorbox">
+            <input type="text" id="exit" placeholder="Insira o nome da saída">
+            <input type="text" id="mission" placeholder="Insira o nome da missão">
+            <input type="number" id="time" placeholder="Insira o tempo">
+            <input type="number" id="hurdle" placeholder="Insira a complexidade">
+            <label for="colorPicker" id="cores">Cor da Saída:</label>
+            <input type="color" id="colorPicker" value="#FF3366">
+            <!-- <input type="text" id="resultados" placeholder=""> -->
+            
+            <div id="clear"><button id="mainbuttons" onclick="removeExit()">Limpar Saída</button><button id="mainbuttons" onclick="removeAll()">Limpar Tudo</button>        </div>
+            <button id="exibir" onclick='window.location.href = "../exibirSaidas/exibirSaidas.html"'> Exibir Saídas</a> 
+
+        <script>
+            // Função para limpar o Storage
+            function removeExit(){
+                const exit = document.getElementById('exit').value.trim()
+                const remove = `Tem certeza que deseja remover a saída ${exit}? Essa ação não pode ser desfeita!`;
+                const conf = confirm(remove)
+                if(exit)
+                    if(conf){
+                        window.alert(`A saída ${exit} foi excluída com sucesso!`)
+                        localStorage.removeItem(exit)
+                        localStorage.removeItem(exit + 'cor')
+                        localStorage.removeItem(exit + 'InOut')
+                    }
+            }
+
+            function removeAll(){
+                const remove = 'Tem certeza que deseja remover TODAS as saídas? Essa ação não pode ser desfeita!'
+                const conf = confirm(remove)
+                if(conf){
+                    localStorage.clear()
+                }
+            }
+        </script>
+    </div>
+</body>
+</html

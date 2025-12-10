@@ -1,0 +1,197 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+body {
+
+    font-family: 'Roboto Serif', serif;
+    color: rgb(0, 0, 0);
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background-color: rgb(242, 195, 151);
+}
+
+#logoSESI {
+    height: 50%;
+    margin: 10px;
+}
+
+#title {
+    background-color: rgb(255, 123, 0);
+    height: 80px;           /* Altura fixa para o header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-family: 'Share Tech', sans-serif;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    /* Alinha ao topo para que canvas e inputs fiquem alinhados na mesma linha */
+    align-items: flex-start;
+    justify-content: center;
+    width: 100vw;
+    height: calc(100vh - 80px); /* Altura total da viewport menos a altura do título */
+
+    /* Mantém position:relative caso queira posicionar filhos relativamente ao container */
+    position: relative;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centraliza os inputs horizontalmente */
+    justify-content: flex-start;
+    width: 40%;
+    height: auto;
+    padding: 20px; /* mais espaço interno */
+    margin-top: 6%;
+}
+
+/* Estiliza todos os inputs e select dentro de #inputs */
+#inputs input[type="number"]{
+    width: 80%; /* largura relativa ao container */
+    height: 40px; /* altura fixa maior */
+    margin: 8px 0; /* espaço vertical entre inputs */
+    padding: 8px 12px;
+    border: 2px solid transparent; /* borda transparente inicial */
+    border-radius: 4px;
+    background-color: white;
+    font-size: 16px; /* texto maior */
+    transition: all 0.2s ease; /* suaviza transições */
+
+}
+
+/* Estilo quando o input está em foco */
+#inputs input[type="number"]:focus,
+#inputs select:focus {
+    border-color: black; /* borda preta quando selecionado */
+    outline: none; /* remove outline padrão do navegador */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* sombra sutil */
+}
+
+/* Estilo especial para o checkbox */
+#inputs input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+/* Estilo para o botão */
+#inputs button,a {
+    width: 80%;
+    height: 40px;
+    margin: 10px 0;
+    background-color: rgb(255, 123, 0);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family:sans-serif; 
+}
+
+#inputs button:hover {
+    background-color: rgb(225, 108, 0);
+}
+
+/* Estilo para o link como botão */
+#inputs a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 16px;
+    width: 80%;
+    height: 40px;
+    background-color: rgb(255, 123, 0);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+    font-family: sans-serif; 
+}
+
+#inputs a:hover {
+    background-color: rgb(225, 108, 0);
+    text-decoration: none;
+}
+
+#canvas {
+    width: 50%;
+    height: auto;
+    margin: auto;
+
+    /* Volta para o fluxo normal (não absoluto) para ficar lado a lado com #inputs */
+    position: relative;
+    align-self: flex-start; /* sobe para o topo do container */
+
+    /* Espaçamento entre canvas e os inputs — ajuste conforme preferir */
+    margin-right: 20px;
+}
+
+#buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+
+}
+#inputs select {
+    width: 85%; /* largura relativa ao container */
+    height: 57px; /* altura fixa maior */
+    margin: 8px 0; /* espaço vertical entre inputs */
+    padding: 8px 12px;
+    border: 2px solid transparent; /* borda transparente inicial */
+    border-radius: 4px;
+    background-color: white;
+    font-size: 16px; /* texto maior */
+    transition: all 0.2s ease; /* suaviza transições */
+}
+
+#home {
+    background: none;
+    position: absolute;
+    margin-right: 90%;
+    border: none;
+
+}
+#tempoTotal {
+    font-family: sans-serif; 
+    background-color: white;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 25px;
+    width: 80%;
+    height: 40px;
+    background-color: rgb(255, 123, 0);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#complexidadeMedia{
+    font-family: sans-serif; 
+    background-color: white;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 25px;
+    width: 80%;
+    height: 40px;
+    background-color: rgb(255, 123, 0);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

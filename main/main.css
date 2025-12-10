@@ -1,0 +1,370 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+body {
+
+    font-family: 'Roboto Serif', serif;
+    color: rgb(0, 0, 0);
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background-color: rgb(242, 195, 151);
+}
+
+#logoSESI {
+    height: 50%;
+    margin: 10px;
+}
+
+#title {
+    background-color: rgb(255, 123, 0);
+    height: 80px;           /* Altura fixa para o header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-family: 'Share Tech', sans-serif;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    /* Alinha ao topo para que canvas e inputs fiquem alinhados na mesma linha */
+    align-items: flex-start;
+    justify-content: center;
+    width: 100vw;
+    height: calc(100vh - 80px); /* Altura total da viewport menos a altura do título */
+
+    /* Mantém position:relative caso queira posicionar filhos relativamente ao container */
+    position: relative;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centraliza os inputs horizontalmente */
+    justify-content: flex-start;
+    width: 80%;
+    height: auto;
+    padding: 20px; /* mais espaço interno */
+    margin-top: 70px;
+    margin-right: 50px;
+
+}
+
+/* Estiliza todos os inputs e select dentro de #inputs */
+#inputs input, #exit, #mission[type="number"]{   
+    width: 80%;
+    height: 40px;
+    margin: 8px 0;
+    padding: 8px 12px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 16px;
+    transition: all 0.2s ease;
+
+
+}
+
+/* Estilo quando o input está em foco */
+#inputs input[type="number"]:focus,
+#inputs select:focus {
+    border-color: black; /* borda preta quando selecionado */
+    outline: none; /* remove outline padrão do navegador */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* sombra sutil */
+}
+
+/* Estilo especial para o checkbox */
+#inputs input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+/* Estilo para o botão */
+#exibir {
+    width: 30%;
+    height: 40px;
+    margin: 10px 0;
+    background-color: rgb(255, 123, 0);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family:sans-serif; 
+}
+
+#inputs button:hover {
+    background-color: rgb(225, 108, 0);
+}
+
+/* Estilo para o link como botão */
+#inputs a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 16px;
+    width: 30%;
+    height: 40px;
+    background-color: rgb(255, 123, 0);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+    font-family: sans-serif; 
+
+}
+
+
+#canvas {
+    width: 100%;
+    height: auto;
+    margin: auto;
+
+    /* Volta para o fluxo normal (não absoluto) para ficar lado a lado com #inputs */
+    position: relative;
+    align-self: flex-start; /* sobe para o topo do container */
+
+    /* Espaçamento entre canvas e os inputs — ajuste conforme preferir */
+}
+
+#buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+
+}
+#inputs select {
+    width: 80%;
+    height: 40px;
+    margin: 8px 0;
+    padding: 8px 12px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+#slot
+{
+    width: 80%;
+    height: 40px;
+    margin: 8px 0;
+    padding: 8px 12px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+#bb8Image {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 10%; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    z-index: 10; /* Garante que a imagem fique acima de outros elementos */
+}
+
+#inputs input[type="number"]::-webkit-inner-spin-button{
+
+    -webkit-appearance: none;
+}
+
+#inputs input[type="number"]::-webkit-outer-spin-button{
+
+    -webkit-appearance: none;
+}
+#home {
+    background: none;
+    position: absolute;
+    margin-right: 90%;
+    border: none;
+
+}
+#clear{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+#separatorA{
+
+    width: 180vw;
+    margin-left: 100px;
+    margin-top: 70px;
+    padding: 20px;
+
+}
+
+#entrada{
+    position: absolute;
+    left: 450px;
+    font-family: sans-serif; 
+    background-color: white;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 15px;
+    width: 8%;
+    height: 20px;
+    background-color: rgb(255, 123, 0);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#saida {
+    position: absolute;
+    left: 600px;
+    font-family: sans-serif; 
+    background-color: white;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 15px;
+    width: 8%;
+    height: 20px;
+    background-color: rgb(255, 123, 0);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Colorir rádios por value (blue/red) e destacar quando selecionados */
+input[type="radio"][value="blue"] {
+    accent-color: #2196F3; /* cor do controle em navegadores que suportam */
+    transform: scale(1.15);
+    border-style: solid;
+    border-width: 5px;
+}
+
+input[type="radio"][value="red"] {
+    accent-color: #f44336;
+    transform: scale(1.15);
+}
+
+/* Sutil destaque ao redor do rádio quando estiver selecionado */
+input[type="radio"][value="blue"]:checked {
+    box-shadow: 0 0 0 6px rgba(33,150,243,0.12);
+}
+
+input[type="radio"][value="red"]:checked {
+    box-shadow: 0 0 0 6px rgba(244,67,54,0.12);
+}
+
+/* Aumenta a área clicável visualmente sem alterar layout */
+input[type="radio"] {
+    margin: 0 6px;
+}
+
+/* Estiliza o label associado quando o rádio está selecionado (input + label) */
+input[type="radio"][value="blue"]:checked + label.blue-label,
+input[type="radio"][value="blue"]:checked + label.radio-label.blue-label {
+    color: #2196F3;
+    font-weight: 700;
+}
+
+input[type="radio"][value="red"]:checked + label.red-label,
+input[type="radio"][value="red"]:checked + label.radio-label.red-label {
+    color: #f44336;
+    font-weight: 700;
+}
+
+input[type="color"] {
+  -webkit-appearance: none; /* remove estilo padrão */
+  border: none;
+  width: 100px;   /* controla largura total */
+  height: 100px;  /* controla altura total */
+  padding: 20px;
+  cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0; /* remove espaço interno */
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none; /* remove borda branca */
+}
+
+#mainbuttons{
+
+    width: 125px;
+    height: 40px;
+    margin: 10px 0;
+    background-color: rgb(255, 123, 0);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family:sans-serif; 
+}
+
+/* Colorir rádios por value (blue/red) e destacar quando selecionados */
+input[type="radio"][value="blue"] {
+    accent-color: #2196F3; /* cor do controle em navegadores que suportam */
+}
+
+input[type="radio"][value="red"] {
+    accent-color: #f44336;
+    transform: scale(1.15);
+}
+
+/* Sutil destaque ao redor do rádio quando estiver selecionado */
+input[type="radio"][value="blue"]:checked {
+    box-shadow: 0 0 0 6px rgba(33,150,243,0.12);
+}
+
+input[type="radio"][value="red"]:checked {
+    box-shadow: 0 0 0 6px rgba(244,67,54,0.12);
+}
+
+/* Aumenta a área clicável visualmente sem alterar layout */
+input[type="radio"] {
+    margin: 0 6px;
+}
+
+/* Estiliza o label associado quando o rádio está selecionado (input + label) */
+input[type="radio"][value="blue"]:checked + label.blue-label,
+input[type="radio"][value="blue"]:checked + label.radio-label.blue-label {
+    color: #2196F3;
+    font-weight: 700;
+}
+
+input[type="radio"][value="red"]:checked + label.red-label,
+input[type="radio"][value="red"]:checked + label.radio-label.red-label {
+    color: #f44336;
+    font-weight: 700;
+}
+
+#cores {
+    width: 405px;
+    height: 40px;
+    margin: 10px 0;
+    background-color: rgb(255, 123, 0);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family:sans-serif; 
+    text-align: center;
+    display: flex;
+    justify-content: center;   /* alinha horizontalmente */
+    align-items: center;       /* alinha verticalmente */      /* precisa de altura definida */
+
+}
